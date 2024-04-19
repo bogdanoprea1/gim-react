@@ -1,0 +1,29 @@
+.tabActive{
+  background-color: #D9D9D9;
+}
+
+
+.myrow-content {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping to ensure side-by-side layout */
+  height: 100vh; /* Optional: Makes the row take full viewport height */
+}
+
+/* Styles for the sidebar menu */
+.mymenu-content {
+  flex: 0 0 80px; /* Flex-grow, flex-shrink, flex-basis */
+  width: 80px; /* Fixed width of the sidebar */
+  height: 100%; /* Take full height of the parent .row */
+  background-color: #f8f9fa; /* Light background color for the sidebar, match with Bootstrap bg-light */
+  overflow-y: auto; /* Allows scrolling on the Y-axis if content overflows */
+  position: fixed; /* Makes the sidebar fixed during scroll */
+  left: 0; /* Aligns the sidebar to the left */
+  top: 0; /* Aligns the sidebar to the top */
+}
+
+/* Styles for the main content area */
+.mytab-content {
+  flex-grow: 1; /* Takes up the remaining space */
+  margin-left: 80px; /* Offset left by the width of the sidebar */
+  padding: 20px; /* Optional: Adds some padding inside the content area */
+}
