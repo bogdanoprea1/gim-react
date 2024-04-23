@@ -43,12 +43,34 @@ const BackContent = () => {
         {
             id: 3,
             label: "Middle Back",
-            gifs: ["https://example.com/gif2.gif", "https://example.com/gif3.gif"],
+            gifs: [
+                middleBackPath + "Close-grip-cable-row.gif",
+                middleBackPath + "One-arm-Cable-Row.gif",
+                middleBackPath + "Reverse-Grip-Machine-Row.gif",
+                middleBackPath + "Seated-Cable-Rope-Row.gif",
+                middleBackPath + "Seated-Cable-Row.gif",
+                middleBackPath + "Seated-Row-Machine.gif",
+                middleBackPath + "T-bar-rows.gif",
+            ],
         },
         {
             id: 4,
             label: "Upper Back",
-            gifs: ["https://example.com/gif2.gif", "https://example.com/gif3.gif"],
+            gifs: [
+                upperBackPath + "Cable-Rear-Pulldown.gif",
+                upperBackPath + "Incline-Barbell-Row.gif",
+                upperBackPath + "Incline-Dumbbell-Hammer-Row.gif",
+                upperBackPath + "Incline-Reverse-Grip-Dumbbell-Row.gif",
+                upperBackPath + "Inverted-Row.gif",
+                upperBackPath + "Kettlebell-Bent-Over-Row.gif",
+                upperBackPath + "Lever-Cable-Rear-Pulldown.gif",
+                upperBackPath + "Lever-High-Row.gif",
+                upperBackPath + "Lever-Reverse-T-Bar-Row.gif",
+                upperBackPath + "Lever-T-bar-Row.gif",
+                upperBackPath + "Plate-Loaded-Seated-Row.gif",
+                upperBackPath + "Reverse-Grip-Barbell-Row.gif",
+                upperBackPath + "Smith-Machine-Bent-Over-Row.gif",
+            ],
         },
         // Add more items as needed
     ];
