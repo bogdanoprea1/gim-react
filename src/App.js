@@ -10,7 +10,7 @@ import LegsContent from "./components/contents/LegsContent";
 import ShouldersContent from "./components/contents/ShouldersContent";
 import TricepsContent from "./components/contents/TricepsContent";
 const App = () => {
-    const [activePanel, setActivePanel] = useState("");
+    const [activePanel, setActivePanel] = useState("v-pills-back");
     const iconPath = "/gim-react/assets/icons/";
     const menuItems = [
         {

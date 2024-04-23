@@ -10,7 +10,7 @@ import ShouldersContent from "./components/contents/ShouldersContent";
 import TricepsContent from "./components/contents/TricepsContent";
 
 const App: React.FC = () => {
-  const [activePanel, setActivePanel] = useState<string>("");
+  const [activePanel, setActivePanel] = useState<string>("v-pills-back");
   const iconPath = "/gim-react/assets/icons/";
   const menuItems: MenuItem[] = [
     {
@@ -86,6 +86,7 @@ const App: React.FC = () => {
       title: "Triceps",
     },
   ];
+
   return (
     <div className="myrow-content">
       <div className="mymenu-content">
