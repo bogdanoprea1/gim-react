@@ -25,7 +25,6 @@ const Dropdown: React.FC<IDropdownProps> = ({ items }) => {
         onChange={handleSelect}
         value={selectedItem?.id || ""}
       >
-        <option value="">Select an item</option>
         {items.map((item) => (
           <option key={item.id} value={item.id}>
             {item.label}
