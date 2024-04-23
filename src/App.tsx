@@ -11,7 +11,7 @@ import TricepsContent from "./components/contents/TricepsContent";
 
 const App: React.FC = () => {
   const [activePanel, setActivePanel] = useState<string>("");
-  const iconPath = "/assets/icons/";
+  const iconPath = "/gim-react/assets/icons/";
   const menuItems: MenuItem[] = [
     {
       id: 1,
@@ -20,6 +20,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <BackContent />,
+      title: "Back",
     },
     {
       id: 2,
@@ -28,6 +29,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <BicepsContent />,
+      title: "Biceps",
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <CalvesContent />,
+      title: "Calves",
     },
     {
       id: 4,
@@ -44,6 +47,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <ChestContent />,
+      title: "Chest",
     },
     {
       id: 5,
@@ -52,6 +56,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <GlutesContent />,
+      title: "Glites",
     },
     {
       id: 6,
@@ -60,6 +65,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <LegsContent />,
+      title: "Legs",
     },
     {
       id: 7,
@@ -68,6 +74,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <ShouldersContent />,
+      title: "Shoulders",
     },
     {
       id: 8,
@@ -76,6 +83,7 @@ const App: React.FC = () => {
       onClick: setActivePanel,
       activePanel: activePanel,
       content: <TricepsContent />,
+      title: "Triceps",
     },
   ];
   return (
@@ -92,45 +100,13 @@ const App: React.FC = () => {
                 (activePanel === item.href ? " show active" : "")
               }
               id={item.href}
+              key={item.id}
               role="tabpanel"
               aria-labelledby={item.href + "-tab"}
             >
               {item.content}
             </div>
           ))}
-          {/* <div
-            className={
-              "tab-pane fade" +
-              (activePanel === "v-pills-back" ? " show active" : "")
-            }
-            id="v-pills-back"
-            role="tabpanel"
-            aria-labelledby="v-pills-back-tab"
-          >
-            back
-          </div>
-          <div
-            className={
-              "tab-pane fade" +
-              (activePanel === "v-pills-biceps" ? " show active" : "")
-            }
-            id="v-pills-biceps"
-            role="tabpanel"
-            aria-labelledby="v-pills-biceps-tab"
-          >
-            biceps
-          </div>
-          <div
-            className={
-              "tab-pane fade" +
-              (activePanel === "v-pills-calves" ? " show active" : "")
-            }
-            id="v-pills-calves"
-            role="tabpanel"
-            aria-labelledby="v-pills-calves-tab"
-          >
-            calves
-          </div> */}
         </div>
       </div>
     </div>

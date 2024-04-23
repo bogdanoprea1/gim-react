@@ -1,3 +1,6 @@
+.root{
+  overflow-y:auto;
+}
 .tabActive{
   background-color: #D9D9D9;
 }
@@ -15,7 +18,7 @@
   width: 80px; /* Fixed width of the sidebar */
   height: 100%; /* Take full height of the parent .row */
   background-color: #f8f9fa; /* Light background color for the sidebar, match with Bootstrap bg-light */
-  overflow-y: auto; /* Allows scrolling on the Y-axis if content overflows */
+  overflow-y: none; /* Allows scrolling on the Y-axis if content overflows */
   position: fixed; /* Makes the sidebar fixed during scroll */
   left: 0; /* Aligns the sidebar to the left */
   top: 0; /* Aligns the sidebar to the top */
@@ -25,5 +28,52 @@
 .mytab-content {
   flex-grow: 1; /* Takes up the remaining space */
   margin-left: 80px; /* Offset left by the width of the sidebar */
-  padding: 20px; /* Optional: Adds some padding inside the content area */
+  padding: 20px; /* Adds some padding inside the content area */
+}
+.inner-tab-content {
+  position: relative; /* Establishes a positioning context for absolutely positioned children */
+  overflow: auto; /* Allows scrolling within the main content area */
+  height: calc(100vh - 40px); /* Adjust height as needed, considering any headers/footers */
+}
+
+.top-fixed-div {
+  position: absolute; /* Positions the div absolutely within its parent .col-12 */
+  top: 0; /* Aligns the div to the top of .col-12 */
+  left: 0; /* Aligns the div to the left of .col-12 */
+  right: 0; /* Extends the div to cover the full width of .col-12 */
+  padding: 10px; /* Optional: Adds padding within the div */
+  background-color: red; /* Gives the div a distinct background */
+  border-bottom: 1px solid #ccc; /* Adds a subtle line under the div */
+  z-index: 1000; /* Ensures the div stays on top of other content */
+}
+
+.sticky-select {
+  position: sticky;
+  top: 20px;
+  z-index: 1000; /* High z-index to keep it above other content */
+  background: white; /* Ensure the select background isn't transparent */
+}
+
+.scrollable-gifs {
+  overflow-y: auto; /* Adds vertical scrollbar if content exceeds max-height */
+}
+
+.figure-caption-centered {
+  display: flex;        /* Establishes a flex container */
+  justify-content: center; /* Centers content along the line (horizontally) */
+  align-items: center;   /* Centers content across the line (vertically) */
+  text-align: center;    /* Ensures the text inside is centered if it wraps */
+}
+
+.figure-custom {
+  display: flex;          /* Establishes a flex container */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center;    /* Centers children horizontally */
+  width: 100%;            /* Ensures the figure takes the full width of its parent */
+  margin: auto;           /* Optional: Centers the figure itself if its parent is wider */
+}
+
+.img-responsive {
+  width: 100%;            /* Makes the image responsive to the width of its container */
+  height: auto;           /* Keeps the image's aspect ratio intact */
 }
