@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FullScreenGif from "./FullScreenGif";
 
 function extractGifNameFromPath(path: string): string {
@@ -15,7 +15,9 @@ const Dropdown: React.FC<IDropdownProps> = ({ items }) => {
     const item = items.find((item) => item.id === id) || null;
     setSelectedItem(item);
   };
-
+  useEffect(() => {
+    setSelectedItem(items[0] || null);
+  }, [items]);
   return (
     <div className="dropdown">
       <select
